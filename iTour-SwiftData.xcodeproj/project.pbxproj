@@ -11,6 +11,7 @@
 		076FEF882B75E928002F5502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FEF872B75E928002F5502 /* ContentView.swift */; };
 		076FEF8A2B75E929002F5502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076FEF892B75E929002F5502 /* Assets.xcassets */; };
 		076FEF8D2B75E929002F5502 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076FEF8C2B75E929002F5502 /* Preview Assets.xcassets */; };
+		076FEF962B75E97C002F5502 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FEF952B75E97C002F5502 /* Destination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		076FEF872B75E928002F5502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		076FEF892B75E929002F5502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076FEF8C2B75E929002F5502 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		076FEF952B75E97C002F5502 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				076FEF852B75E928002F5502 /* iTour_SwiftDataApp.swift */,
-				076FEF872B75E928002F5502 /* ContentView.swift */,
+				076FEF932B75E93E002F5502 /* Views */,
+				076FEF942B75E945002F5502 /* Models */,
 				076FEF892B75E929002F5502 /* Assets.xcassets */,
 				076FEF8B2B75E929002F5502 /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				076FEF8C2B75E929002F5502 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		076FEF932B75E93E002F5502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				076FEF872B75E928002F5502 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		076FEF942B75E945002F5502 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				076FEF952B75E97C002F5502 /* Destination.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			files = (
 				076FEF882B75E928002F5502 /* ContentView.swift in Sources */,
 				076FEF862B75E928002F5502 /* iTour_SwiftDataApp.swift in Sources */,
+				076FEF962B75E97C002F5502 /* Destination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
