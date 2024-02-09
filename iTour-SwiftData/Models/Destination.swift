@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class Destination {
+    @Attribute(.unique)
     var name: String
     var details: String
     var date: Date
