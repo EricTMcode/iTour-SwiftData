@@ -5,6 +5,7 @@
 //  Created by Eric on 09/02/2024.
 //
 
+import PhotosUI
 import SwiftData
 import SwiftUI
 
@@ -13,8 +14,28 @@ struct EditDestinationView: View {
     @Bindable var destination: Destination
     @State private var newSighName = ""
     
+    @State private var photosItem: PhotosPickerItem?
+    
+    var sortedSights: [Sight] {
+        destination.sights.sorted {
+            $0.name < $1.name
+        }
+    }
+    
     var body: some View {
         Form {
+            
+            Section {
+                if let imageDate = destination.image {
+                    if let image = UIImage(data: imageDate) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                }
+                
+                PhotosPicker("Attach a photo", selection: $photosItem, matching: .images)
+            }
             TextField("Name", text: $destination.name)
             TextField("Details", text: $destination.details, axis: .vertical)
             DatePicker("Date", selection: $destination.date)
@@ -29,10 +50,10 @@ struct EditDestinationView: View {
             }
             
             Section("Sights") {
-                ForEach(destination.sights) { sight in
+                ForEach(sortedSights) { sight in
                     Text(sight.name)
                 }
-                .onDelete(perform: deleteSight)
+                .onDelete(perform: deleteSights)
                 
                 HStack {
                     TextField("Add a new sight in \(destination.name)", text: $newSighName)
@@ -43,6 +64,11 @@ struct EditDestinationView: View {
         }
         .navigationTitle("Edit Destination")
         .navigationBarTitleDisplayMode(.inline)
+        .onChange(of: photosItem) {
+            Task {
+                destination.image = try? await photosItem?.loadTransferable(type: Data.self)
+            }
+        }
     }
     
     func addSight() {
@@ -55,13 +81,11 @@ struct EditDestinationView: View {
         }
     }
     
-    func deleteSight(_ indexSet: IndexSet) {
+    func deleteSights(_ indexSet: IndexSet) {
         for index in indexSet {
-            let sight = destination.sights[index]
+            let sight = sortedSights[index]
             modelContext.delete(sight)
         }
-        
-        destination.sights.remove(atOffsets: indexSet)
     }
 }
 
