@@ -13,6 +13,7 @@
 		076FEF8D2B75E929002F5502 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076FEF8C2B75E929002F5502 /* Preview Assets.xcassets */; };
 		076FEF962B75E97C002F5502 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FEF952B75E97C002F5502 /* Destination.swift */; };
 		076FEF982B75ECE7002F5502 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FEF972B75ECE7002F5502 /* EditDestinationView.swift */; };
+		076FEF9C2B75F6C4002F5502 /* DestinationsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FEF9B2B75F6C4002F5502 /* DestinationsListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		076FEF8C2B75E929002F5502 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		076FEF952B75E97C002F5502 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		076FEF972B75ECE7002F5502 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
+		076FEF9B2B75F6C4002F5502 /* DestinationsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				076FEF872B75E928002F5502 /* ContentView.swift */,
+				076FEF9B2B75F6C4002F5502 /* DestinationsListingView.swift */,
 				076FEF972B75ECE7002F5502 /* EditDestinationView.swift */,
 			);
 			path = Views;
@@ -161,6 +164,7 @@
 			files = (
 				076FEF882B75E928002F5502 /* ContentView.swift in Sources */,
 				076FEF862B75E928002F5502 /* iTour_SwiftDataApp.swift in Sources */,
+				076FEF9C2B75F6C4002F5502 /* DestinationsListingView.swift in Sources */,
 				076FEF962B75E97C002F5502 /* Destination.swift in Sources */,
 				076FEF982B75ECE7002F5502 /* EditDestinationView.swift in Sources */,
 			);
