@@ -20,7 +20,7 @@ struct DestinationsListingView: View {
                         Text(destination.name)
                             .font(.headline)
                         
-                        Text(destination.date.formatted(date: .long, time: .shortened))
+                        Text(destination.date.formatted(date: .long, time: .omitted))
                     }
                 }
             }
